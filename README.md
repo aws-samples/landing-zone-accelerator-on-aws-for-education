@@ -20,9 +20,8 @@ Use the following steps to deploy the industry guidance. For detailed instructio
 Step 3. Copy the configuration files
 
 * Clone the `aws-accelerator-config` AWS CodeCommit repository.
-* Clone the [landing-zone-accelerator-on-aws](https://github.com/awslabs/landing-zone-accelerator-on-aws) repo
-* Copy the configs and all the contents from the `aws-best-practices` folder under `reference/sample-configurations` to your local `aws-accelerator-config` repo.
-* Copy the contents from the `aws-best-practices-education` folder under `reference/sample-configurations` to your local `aws-accelerator-config` repo.  You may be prompted to over-write duplicate configs, such as `accounts-config.yaml`.
+* Clone this repo
+* Copy the configs and all the contents from the `config` folder to your local `aws-accelerator-config` repo.
 
 Step 4. Update the configuration files and release a change.
 

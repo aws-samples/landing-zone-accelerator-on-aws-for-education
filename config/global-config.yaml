@@ -14,7 +14,7 @@ snsTopics:
   topics:
     - name: Security
       emailAddresses:
-        - <security-notifications>@example.com  <----- UPDATE EMAIL ADDRESS
+        - <security-notifications>@example.com  #<----- UPDATE EMAIL ADDRESS
 controlTower:
   enable: true
 logging:

@@ -43,7 +43,7 @@ def lambda_handler(event, context):
                             if option['OptionName'] == 'SSL':
                                 for setting in option['OptionSettings']:
                                     if setting['Name'] == "SQLNET.SSL_VERSION":
-                                        ssl_configuration = setting['Value'] in ['1.0', '1.2', '1.2 or 1.0']
+                                        ssl_configuration = setting['Value'] in ['1.2']
                                         break
                                 break
                             elif option['OptionName'] == 'NNE':

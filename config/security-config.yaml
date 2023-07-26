@@ -563,7 +563,7 @@ awsConfig:
           type: Custom
           description: Custom rule for detecting Workdocs users not using defined domain
           inputParameters:
-            # set the allowed domain for users 
+            # UPDATE: set the allowed domain for Workdocs users
             WorkDocsDomain: "example.edu"
           customRule:
             lambda:
@@ -583,7 +583,7 @@ awsConfig:
           type: Custom
           description: Custom rule for validating Cognito password policy meets define parameters.
           inputParameters:
-            # Adjust below parameters to preferred password policy requirements.
+            # UPDATE: Adjust below parameters to preferred Cognito password policy requirements.
             MinimumLength: "10"
             RequireUppercase: "True"
             RequireLowercase: "True"

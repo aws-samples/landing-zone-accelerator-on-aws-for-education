@@ -45,7 +45,7 @@ serviceControlPolicies:
     deploymentTargets:
       organizationalUnits:
         - Education
-  # Not deployed by default, edit SCP for appropriate regions and deploy if needed.
+  # UPDATE: Disabled by default, edit SCP for appropriate regions and deploy if needed.
   - name: EducationSCP2
     description: >
       Education Controls to allow only specific s3 bucket regions
@@ -54,6 +54,7 @@ serviceControlPolicies:
     deploymentTargets:
       organizationalUnits: []
  # https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html
+ # UPDATE: Adjust tags in org-tag-policy.json
 taggingPolicies:
   - name: TagPolicy
     description: Organization Tagging Policy

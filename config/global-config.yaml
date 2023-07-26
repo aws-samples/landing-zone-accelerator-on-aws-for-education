@@ -136,31 +136,31 @@ reports:
           threshold: 100
           comparisonOperator: GREATER_THAN
           subscriptionType: EMAIL
-          address: <budget-notifications>@example.com  <----- UPDATE EMAIL ADDRESS
+          address: <budget-notifications>@example.com  #<----- UPDATE EMAIL ADDRESS
         - type: ACTUAL
           thresholdType: PERCENTAGE
           threshold: 90
           comparisonOperator: GREATER_THAN
           subscriptionType: EMAIL
-          address: <budget-notifications>@example.com  <----- UPDATE EMAIL ADDRESS
+          address: <budget-notifications>@example.com  #<----- UPDATE EMAIL ADDRESS
         - type: ACTUAL
           thresholdType: PERCENTAGE
           threshold: 80
           comparisonOperator: GREATER_THAN
           subscriptionType: EMAIL
-          address: <budget-notifications>@example.com  <----- UPDATE EMAIL ADDRESS
+          address: <budget-notifications>@example.com  #<----- UPDATE EMAIL ADDRESS
         - type: ACTUAL
           thresholdType: PERCENTAGE
           threshold: 75
           comparisonOperator: GREATER_THAN
           subscriptionType: EMAIL
-          address: <budget-notifications>@example.com  <----- UPDATE EMAIL ADDRESS
+          address: <budget-notifications>@example.com  #<----- UPDATE EMAIL ADDRESS
         - type: ACTUAL
           thresholdType: PERCENTAGE
           threshold: 50
           comparisonOperator: GREATER_THAN
           subscriptionType: EMAIL
-          address: <budget-notifications>@example.com  <----- UPDATE EMAIL ADDRESS
+          address: <budget-notifications>@example.com  #<----- UPDATE EMAIL ADDRESS
 backup:
   vaults:
     - name: BackupVault

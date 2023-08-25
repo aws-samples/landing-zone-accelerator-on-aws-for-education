@@ -47,7 +47,7 @@ Education LZA accounts are generated and organized as follows:
 
 ![Education LZA Org Structure](./images/LZA_Organizational_Structure.png)
 
-In the Education LZA Organization Structure, the Education Organization Unit(OU) represents the logical construct where workloads for the institution will reside. It contains accounts for various workloads such as Sofwatre Information System (SIS) and Learning Management System (LMS). This OU structure is provided to you. However, you are free to change the organizational structure, organizational units (OUs), and accounts to meet your specific needs. For additional information about how to best organize your AWS OU and account structure, please reference the recommended OUs and accounts in the [For further consideration](#for-further-consideration) section below as you begin to experiment with the LZA for Education.
+In the Education LZA Organization Structure, the Education Organization Unit (OU) represents the logical construct where workloads for the institution will reside. It contains accounts for various workloads such as Student Information System (SIS) and Learning Management System (LMS). This OU structure is provided to you. However, you are free to change the organizational structure, organizational units (OUs), and accounts to meet your specific needs. For additional information about how to best organize your AWS OU and account structure, please reference the recommended OUs and accounts in the [For further consideration](#for-further-consideration) section below as you begin to experiment with the LZA for Education.
 
 > **Compliance Use Case:** The Education OU can be used for compliance needs such as 800-171/800-53/CMMC.
 
@@ -56,7 +56,7 @@ AWS LZA for Education Organizational Structure
 
 By default, the LZA for Education builds the above organizational structure, with the exception of the `Management` and `Security` OU, which are predefined by you prior to launching the LZA. The below architecture diagram highlights the key deployments:
 
-* **A Education OU**
+* **An Education OU**
     * Contains development and production accounts for both `LMS` and `SIS` workloads
     * Refer to the network-config.yaml file for examples to customize your VPCs and networks.
     * No VPCs are configured in this OU by default; you will need to define them based on your requirements.
@@ -73,10 +73,10 @@ Below is a reference architecture diagram from the LZA [Architecture overview] d
 
 The accounts in the `Education` OU represent a standard infrastructure for development or production deployment of your workloads.  The Infrastructure OU provides the following specialized functions:
 
-* The Network account provides an AWS Transit Gateway for routing traffic between accounts and, potentially, to and from the Internet.  It also includes a Network Inspection VPC for permiter defenses, such as firewalls or third-party IPS/IDS solutions.
+* The Network account provides an AWS Transit Gateway for routing traffic between accounts and, potentially, to and from the Internet.  It also includes a Network Inspection VPC for perimeter defenses, such as firewalls or third-party IPS/IDS solutions.
 * The Shared Services account is intended to house centrally-shared services that are accessible to all of the accounts in your infrastructure.  For example, you might deploy an Internet Gateway here for external access, or a central directory service such as LDAP or Active Directory.
 
-Please additionally review the `network-config.yaml`. It contains several commented-out examples which you may wish to customize to meet your orgnization's requirements.
+Please additionally review the `network-config.yaml`. It contains several commented-out examples which you may wish to customize to meet your organization's requirements.
 
 ## Security Controls
 Security controls are set in place as protection against human error and safe guards from inadvertent actions within the AWS environment. These controls take the form of AWS Config rules and Service Control Policies (SCPs). The file `organization-config.yaml` provides detailed information surrounding the declaration of SCPs, Tagging Policies, and Backup Policies. SCPs can be as general or as specific as needed. Each SCP workload is able to be customized to meet organization requirements. Below are sample policies provided for a few specific use cases:

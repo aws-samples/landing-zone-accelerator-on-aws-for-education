@@ -100,7 +100,7 @@
       ],
       "Resource": [
         "arn:${PARTITION}:logs:*:*:log-group:aws-accelerator-*",
-        "arn:${PARTITION}:logs:*:*:log-group:/aws/lambda/${ACCELERATOR_PREFIX}-*"
+        "arn:${PARTITION}:logs:*:*:log-group:/aws/lambda/AWSAccelerator-*"
       ],
       "Condition": {
         "ArnNotLike": {
@@ -115,10 +115,12 @@
     {
       "Sid": "PreventCloudWatchLogStreamModification",
       "Effect": "Deny",
-      "Action": ["logs:DeleteLogStream"],
+      "Action": [
+       "logs:DeleteLogStream"
+      ],
       "Resource": [
         "arn:${PARTITION}:logs:*:*:log-group:aws-accelerator-*:log-stream:*",
-        "arn:${PARTITION}:logs:*:*:log-group:/aws/lambda/${ACCELERATOR_PREFIX}-*:log-stream:*"
+        "arn:${PARTITION}:logs:*:*:log-group:/aws/lambda/AWSAccelerator-*:log-stream:*"
       ],
       "Condition": {
         "ArnNotLike": {

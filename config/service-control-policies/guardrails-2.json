@@ -24,19 +24,34 @@
     {
       "Sid": "IamRolesStatement",
       "Effect": "Deny",
-      "Action": ["iam:*"],
+      "Action": [
+        "iam:AttachRolePolicy",
+        "iam:CreateAccountAlias",
+        "iam:DeleteAccountAlias",
+        "iam:CreateUser",
+        "iam:DeleteUser",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:CreatePolicy",
+        "iam:DeletePolicy",
+        "iam:DeleteRolePermissionsBoundary",
+        "iam:DeleteRolePolicy",
+        "iam:DetachRolePolicy",
+        "iam:PutRolePermissionsBoundary",
+        "iam:PutRolePolicy",
+        "iam:UpdateAssumeRolePolicy",
+        "iam:UpdateRole",
+        "iam:UpdateRoleDescription"
+      ],
       "Resource": [
-        "arn:${PARTITION}:iam::*:role/${ACCELERATOR_PREFIX}-*",
-        "arn:${PARTITION}:iam::*:role/cdk-accel-*",
-        "arn:${PARTITION}:iam::*:role/${MANAGEMENT_ACCOUNT_ACCESS_ROLE}"
+        "arn:${PARTITION}:iam::*:role/${ACCELERATOR_PREFIX}-*"
       ],
       "Condition": {
         "ArnNotLike": {
           "aws:PrincipalARN": [
             "arn:${PARTITION}:iam::*:role/${ACCELERATOR_PREFIX}-*",
-            "arn:${PARTITION}:iam::*:role/cdk-accel-*",
             "arn:${PARTITION}:iam::*:role/${MANAGEMENT_ACCOUNT_ACCESS_ROLE}",
-            "arn:${PARTITION}:iam::*:role/AWSServiceRoleForConfig"
+            "arn:${PARTITION}:iam::*:role/cdk-accel-*"
           ]
         }
       }
@@ -70,19 +85,19 @@
       "Sid": "MacieServiceStatement",
       "Effect": "Deny",
       "Action": [
-        "macie2:AcceptInvitation",
-        "macie2:CreateInvitations",
-        "macie2:CreateMember",
-        "macie2:DeclineInvitations",
-        "macie2:DeleteInvitations",
-        "macie2:DeleteMember",
-        "macie2:DisableMacie",
-        "macie2:DisableOrganizationAdminAccount",
-        "macie2:Disassociate*",
-        "macie2:Enable*",
-        "macie2:UpdateMacieSession",
-        "macie2:UpdateMemberSession",
-        "macie2:UpdateOrganizationConfiguration"
+        "macie:AcceptInvitation",
+        "macie:CreateInvitations",
+        "macie:CreateMember",
+        "macie:DeclineInvitations",
+        "macie:DeleteInvitations",
+        "macie:DeleteMember",
+        "macie:DisableMacie",
+        "macie:DisableOrganizationAdminAccount",
+        "macie:Disassociate*",
+        "macie:Enable*",
+        "macie:UpdateMacieSession",
+        "macie:UpdateMemberSession",
+        "macie:UpdateOrganizationConfiguration"
       ],
       "Resource": "*",
       "Condition": {
@@ -129,14 +144,14 @@
       "Sid": "PreventCloudTrailModification",
       "Effect": "Deny",
       "Action": [
-        "cloudtrail:PutInsightSelectors",
+        "cloudtrail:PutInsightSelectors", 
         "cloudtrail:PutEventSelectors",
         "cloudtrail:StopLogging",
         "cloudtrail:DeleteTrail",
         "cloudtrail:UpdateTrail",
         "cloudtrail:CreateTrail"
       ],
-      "Resource": "arn:${PARTITION}:cloudtrail:*:*:trail/${ACCELERATOR_PREFIX}-*",
+      "Resource": "arn:${PARTITION}:cloudtrail:*:*:trail/AWSAccelerator-*",
       "Condition": {
         "ArnNotLike": {
           "aws:PrincipalARN": [

@@ -4,7 +4,7 @@
 
 **The Landing Zone Accelerator on AWS (LZA)** for Education is an industry specific deployment of the [Landing Zone Accelerator on AWS](https://aws.amazon.com/solutions/implementations/landing-zone-accelerator-on-aws/) solution architected to align with AWS best practices and in conformance with multiple, global compliance frameworks. Built on top of the standard AWS Control Tower accounts, namely `Management`, `Audit`, and `LogArchive`, the LZA for Education deploys additional resources that helps establish platform readiness with security, compliance, and operational capabilities. It is important to note that the Landing Zone Accelerator solution will not, by itself, make you compliant. It provides the foundational infrastructure from which additional complementary solutions can be integrated. You must review, evaluate, assess, and approve the solution in compliance with your organization's particular security features, tools, and configurations.
 
-> **_Note_:** An overall high-level configuration summary can be found in the [CFG_SUMMARY.md](CFG_SUMMARY.md) file.
+> **_Note_:** An overall high-level configuration summary can be found in the [CFG_SUMMARY.md](CFG_SUMMARY.md) file. This sample configuration has been tested with LZA v1.5.0.
 
 ## Deployment Overview
 
